@@ -29,9 +29,7 @@ class HomeScreen extends StatelessWidget {
           ],
           leading: Padding(
             padding: const EdgeInsets.only(left: 17, right: 17, top: 12),
-            child: 
-      const BellWidget(),
-  
+            child: const BellWidget(),
           ),
 
           //,) ,
@@ -60,7 +58,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-            
+
               SizedBox(
                 height:
                     Device.orientation == Orientation.portrait ? 25.h : 50.h,
@@ -78,7 +76,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              
+
               TextFormFieldWidget(
                 controller: controllerEmail,
                 labeText: 'ابحث عن سيارتك',
@@ -122,20 +120,16 @@ class HomeScreen extends StatelessWidget {
               ),
 
               Container(
-                height:
-                     45.h ,
+                height: 45.h,
                 width: double.infinity,
                 child: GridView.count(
                     crossAxisCount: 2,
                     crossAxisSpacing: 4.0,
                     mainAxisSpacing: 8.0,
                     children: List.generate(carImage.length, (index) {
-                      return 
-                        CarWidget(
-                            model: carImage[index],
-                          );
-                        
-                      
+                      return CarWidget(
+                        model: carImage[index],
+                      );
                     })),
               ),
               SizedBox(
@@ -159,11 +153,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              //       
+              //
             ],
           ),
         ));
   }
 }
-
-
